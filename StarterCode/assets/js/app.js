@@ -1,21 +1,20 @@
-// d3.select(window).on("resize", handleResize);
+d3.select(window).on("resize", handleResize);
 
-// // When the browser loads, call loadchart()
-// loadChart();
+loadChart();
 
-// function handleResize() {
-//   var svgArea = d3.select("svg");
+function handleResize() {
+  var svgArea = d3.select("svg");
 
-//   // If there is already an svg container on the page, remove it and reload the chart
-//   if (!svgArea.empty()) {
-//     svgArea.remove();
-//     loadChart();
-//   };
-// };
 
-// function loadChart() {
-//     var svgWidth = window.innerWidth;
-//     var svgHeight = window.innerHeight;
+  if (!svgArea.empty()) {
+    svgArea.remove();
+    loadChart();
+  };
+};
+
+function loadChart() {
+    var svgWidth = window.innerWidth;
+    var svgHeight = window.innerHeight;
 
 var svgWidth = 960;
 var svgHeight = 500;
